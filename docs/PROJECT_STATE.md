@@ -155,7 +155,7 @@ Download/mirror references observed on 2026-09-29:
 16. 바인딩 검증 ✅ (원본 DAT 유지, hash-mismatch return only neutralized)
 17. No-Residue 패처 ✅ (TEST)
 18. Windows 실사용 테스트 ✅ (설치 + 완료 버튼 PASS)
-19. 배포 기준 SHA-256 확정 ⏳ (post-reboot/no-residue PASS 후 FINAL)
+19. 배포 기준 SHA-256 확정 ✅
 
 ## Repository policy
 
@@ -200,5 +200,23 @@ Safe cleanup HOTFIX candidate:
 - Does not delete while RunOnce `UnmountDrv` is pending.
 - Otherwise removes `C:\Drivers` recursively on normal AutoIt exit.
 - Static verification: **PASS**
-- Runtime cleanup test: **PENDING**
+- Runtime cleanup test: **PASS**
 - Verification: `docs/EDv9_26v5_DRIVERS_CLEANUP_HOTFIX_STATIC_VERIFICATION.md`
+
+
+### 26v5 FINAL
+
+Runtime-verified FINAL baseline:
+
+- Final EXE: `EDv9_x64_KO_CLEAN.exe`
+- Final EXE SHA-256: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
+- Final size: 20,427,288 bytes
+- Final No-Residue one-click patcher SHA-256: `D85D67349288B0902ED848485E5DE900FEB36A49A6AED79A1714A1D257D86D2E`
+- Windows launch/UI/scan/install/completion: PASS
+- SoftInst/RunOnce residue: PASS (none)
+- C:\Drivers automatic cleanup: PASS
+- Existing C:\Drivers protection: implemented
+- UnmountDrv pending cleanup protection: implemented
+- Detailed final runtime report: `docs/EDv9_26v5_FINAL_RUNTIME_20260930.md`
+
+Status: **FINAL RUNTIME VERIFIED**
