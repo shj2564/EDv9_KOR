@@ -180,3 +180,25 @@ Download/mirror references observed on 2026-09-29:
 - Detailed verification: `docs/EDv9_26v5_KOREAN_CLEAN_STATIC_VERIFICATION.md`
 - Status: **WINDOWS INSTALL + COMPLETION BUTTON PASS / POST-REBOOT NO-RESIDUE CHECK PENDING**
 - Windows launch → Korean UI → scan → install → completion button: **PASS**\n- Remaining FINAL gate: reboot/UnmountDrv cleanup + SoftInst/Edge no-residue confirmation\n- Runtime evidence: `docs/EDv9_26v5_WINDOWS_RUNTIME_20260930.md`\n
+
+### 26v5 post-install residue check
+
+User verification on Windows:
+- `Test-Path C:\SoftInst` -> `False`
+- `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce` -> no SoftInst/inst.vbs entry shown
+- SoftInst/RunOnce no-residue: **PASS**
+
+Remaining residue observed:
+- `C:\Drivers` remained after the successful install test.
+
+Safe cleanup HOTFIX candidate:
+- EXE SHA-256: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
+- Size: 20,427,288 bytes
+- Token SHA-256: `C2FE0C9D5FBA4A43697A81798710C0A164E5EB1BEB62E66B494EBCB15A9F6861`
+- Uses exact token bytes from the 26v4 final Completion HOTFIX for the safe `C:\Drivers` cleanup handler.
+- Does not delete a pre-existing `C:\Drivers` folder.
+- Does not delete while RunOnce `UnmountDrv` is pending.
+- Otherwise removes `C:\Drivers` recursively on normal AutoIt exit.
+- Static verification: **PASS**
+- Runtime cleanup test: **PENDING**
+- Verification: `docs/EDv9_26v5_DRIVERS_CLEANUP_HOTFIX_STATIC_VERIFICATION.md`
