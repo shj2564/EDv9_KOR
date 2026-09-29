@@ -1,6 +1,6 @@
 # PROJECT STATE
 
-Last updated: 2026-09-29 KST
+Last updated: 2026-09-30 KST
 
 ## Project target
 
@@ -154,8 +154,8 @@ Download/mirror references observed on 2026-09-29:
 15. CLEAN OFFLINE neutralization ✅
 16. 바인딩 검증 ✅ (원본 DAT 유지, hash-mismatch return only neutralized)
 17. No-Residue 패처 ✅ (TEST)
-18. Windows 실사용 테스트 ⏳
-19. 배포 기준 SHA-256 확정 ⏳ (runtime PASS 후 FINAL)
+18. Windows 실사용 테스트 ✅ (설치 + 완료 버튼 PASS)
+19. 배포 기준 SHA-256 확정 ⏳ (post-reboot/no-residue PASS 후 FINAL)
 
 ## Repository policy
 
@@ -178,5 +178,5 @@ Download/mirror references observed on 2026-09-29:
 - Core PE .text/.rdata/.data/.pdata/.reloc byte-identical
 - TEST one-click patcher SHA-256: `C1B02DCDDA0A509329D788297FF9B7C64BC55ECAF10DC092E1A8520C936FF0B9`\n- TEST patcher additionally verifies full Drivers folder + `Drivers/@version` SHA-256 before applying
 - Detailed verification: `docs/EDv9_26v5_KOREAN_CLEAN_STATIC_VERIFICATION.md`
-- Status: **STATIC VERIFIED / WINDOWS RUNTIME TEST REQUIRED**
-- Do not promote to FINAL until launch → DB → scan → install → completion button → reboot cleanup passes\n
+- Status: **WINDOWS INSTALL + COMPLETION BUTTON PASS / POST-REBOOT NO-RESIDUE CHECK PENDING**
+- Windows launch → Korean UI → scan → install → completion button: **PASS**\n- Remaining FINAL gate: reboot/UnmountDrv cleanup + SoftInst/Edge no-residue confirmation\n- Runtime evidence: `docs/EDv9_26v5_WINDOWS_RUNTIME_20260930.md`\n
