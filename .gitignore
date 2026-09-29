@@ -1,0 +1,33 @@
+# Large/original EDv9 packages
+*.zip
+*.7z
+*.s7z
+*.iso
+*.wim
+*.db
+*.key
+
+# Executables/binaries: add only intentionally via release/artifact workflow
+*.exe
+*.dll
+
+# Temporary/build residue
+*.tmp
+*.temp
+*.bak
+*.log
+*.crdownload
+__pycache__/
+.cache/
+build/
+dist/
+out/
+temp/
+tmp/
+
+# OS/editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
