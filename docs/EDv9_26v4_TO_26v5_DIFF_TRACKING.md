@@ -63,7 +63,7 @@ Breakdown:
 
 This means the complete previous XQS patch can be transferred to 26v5 deterministically by source-value identity, despite XQS index shuffling between releases.
 
-`patches/26v5/port_manifest.json` records the resolved v5 target index, SHA-256 of the expected source value, and replacement target for all 419 transformations.
+`patches/26v5/port_manifest.json` records all 419 verified 26v4→26v5 XQS index mappings plus the 10 code-neutralization mappings. Replacement values are taken from the verified 26v4 CLEAN baseline at the recorded source index.
 
 ## Result 3 — Raw XQS changes from 26v4 to 26v5 are small and non-UI
 
