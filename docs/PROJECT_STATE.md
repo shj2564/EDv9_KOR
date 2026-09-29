@@ -176,7 +176,7 @@ Download/mirror references observed on 2026-09-29:
 - Remaining CJK 150/150 = timezone/internal records
 - UnmountDrv retained
 - Core PE .text/.rdata/.data/.pdata/.reloc byte-identical
-- TEST one-click patcher SHA-256: `65ED8BB484688E7F46E1D0AB07AB03DFDCC4276DE9D3D6AB8B9B9D728C21C21F`
+- TEST one-click patcher SHA-256: `C1B02DCDDA0A509329D788297FF9B7C64BC55ECAF10DC092E1A8520C936FF0B9`\n- TEST patcher additionally verifies full Drivers folder + `Drivers/@version` SHA-256 before applying
 - Detailed verification: `docs/EDv9_26v5_KOREAN_CLEAN_STATIC_VERIFICATION.md`
 - Status: **STATIC VERIFIED / WINDOWS RUNTIME TEST REQUIRED**
 - Do not promote to FINAL until launch → DB → scan → install → completion button → reboot cleanup passes\n
