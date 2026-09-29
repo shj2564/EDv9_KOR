@@ -88,7 +88,20 @@ Verified public version information:
 - Public mirror pages observed: 2026-09-28 ~ 2026-09-29
 - Software change note: stable release minor adjustment (稳定版微调)
 
+### Direct mirror confirmed in real use
+
+2026-09-29 사용자 브라우저에서 아래 **직접 HTTP/HTTPS 파일 미러가 실제 다운로드 중인 것을 확인**:
+
+`https://152.136.103.177:5245/cu/IT天空资源分流/万能驱动/万能驱动9/EDv9_26v5.zip`
+
+Observed from browser:
+- File: `EDv9_26v5.zip`
+- Displayed size: about **9.51 GB**
+- Download was actively progressing without a paid cloud-drive gate
+- This route is preferred over Quark/Baidu/123Pan when the latter require payment or throttled app workflows
+
 Download/mirror references observed on 2026-09-29:
+- Direct file mirror: https://152.136.103.177:5245/cu/IT天空资源分流/万能驱动/万能驱动9/EDv9_26v5.zip
 - Puresys mirror page: https://www.puresys.net/1147.html
 - Puresys 123Pan shared folder: https://www.123pan.cn/s/1QeA-4fVrv
 - Puresys Baidu share: https://pan.baidu.com/s/1X4rnmDzgLsnLrj6XDbazsA?pwd=vijn
@@ -98,8 +111,8 @@ Download/mirror references observed on 2026-09-29:
 - 4FB listing also shows ITSK 驱动_26v5 官方26年09月版 on 2026-09-29, but its individual article/download URL was not yet indexed during verification.
 
 Current repository status:
-- Original full package: not yet acquired
-- Original archive SHA-256: pending
+- Original full package: **download in progress**
+- Original archive SHA-256: pending completion
 - Original EXE/DAT SHA-256: pending
 - 26v4 vs 26v5 binary/token/XQS diff: pending
 
