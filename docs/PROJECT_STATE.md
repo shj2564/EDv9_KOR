@@ -149,13 +149,13 @@ Download/mirror references observed on 2026-09-29:
 10. Edge/브라우저 조작 코드 확인
 11. ITSK/123/2345/360 관련 네트워크 경로 확인
 12. UnmountDrv 정상 경로 분리 확인
-13. 기존 한국어 UI 이식
-14. 신규 문자열 번역 및 길이 조정
-15. CLEAN OFFLINE neutralization
-16. 바인딩 검증
-17. No-Residue 패처
-18. Windows 실사용 테스트
-19. 배포 기준 SHA-256 확정
+13. 기존 한국어 UI 이식 ✅
+14. 신규 문자열 번역 및 길이 조정 ✅ (신규 CJK UI 0)
+15. CLEAN OFFLINE neutralization ✅
+16. 바인딩 검증 ✅ (원본 DAT 유지, hash-mismatch return only neutralized)
+17. No-Residue 패처 ✅ (TEST)
+18. Windows 실사용 테스트 ⏳
+19. 배포 기준 SHA-256 확정 ⏳ (runtime PASS 후 FINAL)
 
 ## Repository policy
 
@@ -167,3 +167,16 @@ Download/mirror references observed on 2026-09-29:
 - 패치 배포 파일 수는 최소화한다.
 - 임시/백업 찌꺼기는 종료 후 제거한다.
 - 대용량 원본 패키지 및 드라이버 DB/WIM은 Git 히스토리에 직접 넣지 않는다.
+\n\n### 26v5 Korean CLEAN candidate\n\n- 26v5 Korean CLEAN candidate build ✅
+- Candidate EXE SHA-256: `40D5155F455260AC750B65BA80499B8C88673C3DCA18EAA750C26D238A886D89`
+- Candidate size: 17,870,872 bytes
+- Patched token SHA-256: `625608E90CD49C9E45623882FDAD9C4271D72C60212CBE73BAA5F07FEC5FEA59`
+- 419/419 XQS replacements verified
+- CLEAN code neutralization 10/10 verified
+- Remaining CJK 150/150 = timezone/internal records
+- UnmountDrv retained
+- Core PE .text/.rdata/.data/.pdata/.reloc byte-identical
+- TEST one-click patcher SHA-256: `65ED8BB484688E7F46E1D0AB07AB03DFDCC4276DE9D3D6AB8B9B9D728C21C21F`
+- Detailed verification: `docs/EDv9_26v5_KOREAN_CLEAN_STATIC_VERIFICATION.md`
+- Status: **STATIC VERIFIED / WINDOWS RUNTIME TEST REQUIRED**
+- Do not promote to FINAL until launch → DB → scan → install → completion button → reboot cleanup passes\n
