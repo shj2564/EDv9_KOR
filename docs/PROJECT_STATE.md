@@ -111,9 +111,19 @@ SHA-256:
 Status:
 - Original ZIP acquired ✅
 - Archive hash recorded ✅
-- EXE/DAT/INI/@version extraction pending
-- Original EXE/DAT SHA-256 pending
-- 26v4 vs 26v5 binary/token/XQS diff pending
+- EXE/DAT/INI/@version extracted ✅
+- Original EXE SHA-256: `C42EBB207FA52E8420F381952AE6A1EF6D37AE7164FE32E60841B1B630D11E86`
+- Original DAT SHA-256: `A713503A6D7FD6F1DAB450AB8CE5DC01B06550D0E7B5DCF5D17D54BAB8F7373D`
+- AutoIt EA06 SCRIPT recovery ✅
+- recovered source: 24,031 lines
+- XQS: 4,940 entries
+- CJK strings: 538 = time/zone internal 150 + other 388
+- SoftInst / wget / inst.cmd / inst.vbs present
+- 123.itsk.com / api.itsk.com present
+- 2345 / 360 portal strings present
+- Edge msedge / homepage / startup_urls / restore_on_startup / PrefsLightweight paths present
+- UnmountDrv present and must be preserved
+- 26v4 vs 26v5 binary/token/XQS diff: next
 
 Download/mirror references observed on 2026-09-29:
 - Direct file mirror: https://152.136.103.177:5245/cu/IT天空资源分流/万能驱动/万能驱动9/EDv9_26v5.zip
