@@ -143,7 +143,7 @@ Download/mirror references observed on 2026-09-29:
 4. EXE/DAT SHA-256
 5. PE / AutoIt EA06 / SCRIPT offset 확인
 6. XQS 구조 확인
-7. 26v4 함수/문자열/token diff
+7. 26v4 함수/문자열/token diff ✅
 8. DAT 바인딩 구조 확인
 9. SoftInst / wget / inst.cmd / inst.vbs 확인
 10. Edge/브라우저 조작 코드 확인
