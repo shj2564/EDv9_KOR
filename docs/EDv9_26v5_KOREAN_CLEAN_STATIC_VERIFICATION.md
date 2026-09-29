@@ -10,7 +10,7 @@ Date: 2026-09-29 KST
 - Candidate size: 17,870,872 bytes
 - Original DAT SHA-256: `A713503A6D7FD6F1DAB450AB8CE5DC01B06550D0E7B5DCF5D17D54BAB8F7373D`
 - Original DAT is unchanged.
-- TEST one-click patcher SHA-256: `65ED8BB484688E7F46E1D0AB07AB03DFDCC4276DE9D3D6AB8B9B9D728C21C21F`
+- TEST one-click patcher SHA-256: `C1B02DCDDA0A509329D788297FF9B7C64BC55ECAF10DC092E1A8520C936FF0B9`
 - Verification report SHA-256: `C7822428DB380FAA707351299A280189E0CEE3D50A8803B95B3B3311401F87CB`
 
 ## Regression gate before 26v5 build
@@ -104,10 +104,10 @@ Any executable modification invalidates the vendor's Authenticode signature vali
 
 The TEST patcher:
 
-- requires the exact 26v5 original EXE/DAT/INI hashes before applying
+- requires the exact 26v5 original EXE/DAT/INI and `Drivers/@version` hashes before applying
 - never overwrites `EDv9_x64.exe`
 - creates only `EDv9_x64_KO_CLEAN.exe`
-- preserves DAT / INI / Drivers
+- refuses to proceed without the full `Drivers` folder and the expected `Drivers/@version` file\n- preserves DAT / INI / Drivers
 - refuses to overwrite a different existing CLEAN EXE
 - verifies the embedded candidate SHA-256 before and after writing
 - `/restore` deletes only the exact matching candidate it created
