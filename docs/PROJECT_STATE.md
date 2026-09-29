@@ -81,13 +81,27 @@ Windows 실제 환경에서:
 
 ## 26v5
 
-2026-09-29 기준 공개 배포 흔적이 확인된 다음 세대.
+Verified public version information:
+- Release line: 26v5
+- Internal version: **9.0.2609.20009**
+- Changelog date: **2026-09-24**
+- Public mirror pages observed: 2026-09-28 ~ 2026-09-29
+- Software change note: stable release minor adjustment (稳定版微调)
 
-현재 저장소 기준 상태:
-- 원본 전체 패키지: 미등록
-- 정확한 내부 9.0.x 빌드번호: 원본 확보 후 검증
-- 원본 EXE/DAT SHA-256: 원본 확보 후 검증
-- 26v4 대비 binary/token/XQS diff: 대기
+Download/mirror references observed on 2026-09-29:
+- Puresys mirror page: https://www.puresys.net/1147.html
+- Puresys 123Pan shared folder: https://www.123pan.cn/s/1QeA-4fVrv
+- Puresys Baidu share: https://pan.baidu.com/s/1X4rnmDzgLsnLrj6XDbazsA?pwd=vijn
+- 4MF mirror page: https://www.4mf.net/47835.html
+- 4MF Quark share: https://pan.quark.cn/s/52492e99907f
+- 4MF Baidu share: https://pan.baidu.com/s/1AaCICasQHFiZhsIBO3KIWw?pwd=88in
+- 4FB listing also shows ITSK 驱动_26v5 官方26年09月版 on 2026-09-29, but its individual article/download URL was not yet indexed during verification.
+
+Current repository status:
+- Original full package: not yet acquired
+- Original archive SHA-256: pending
+- Original EXE/DAT SHA-256: pending
+- 26v4 vs 26v5 binary/token/XQS diff: pending
 
 ### 26v5 작업 순서
 
