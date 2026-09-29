@@ -97,8 +97,23 @@ Verified public version information:
 Observed from browser:
 - File: `EDv9_26v5.zip`
 - Displayed size: about **9.51 GB**
-- Download was actively progressing without a paid cloud-drive gate
+- Download completed successfully
 - This route is preferred over Quark/Baidu/123Pan when the latter require payment or throttled app workflows
+
+### Original archive baseline
+
+File:
+`EDv9_26v5.zip`
+
+SHA-256:
+`62A131570E3C33FEF76236C69D6B8DD24406CBE5FD6F62DAE187545A0C11BE43`
+
+Status:
+- Original ZIP acquired ✅
+- Archive hash recorded ✅
+- EXE/DAT/INI/@version extraction pending
+- Original EXE/DAT SHA-256 pending
+- 26v4 vs 26v5 binary/token/XQS diff pending
 
 Download/mirror references observed on 2026-09-29:
 - Direct file mirror: https://152.136.103.177:5245/cu/IT天空资源分流/万能驱动/万能驱动9/EDv9_26v5.zip
@@ -110,16 +125,10 @@ Download/mirror references observed on 2026-09-29:
 - 4MF Baidu share: https://pan.baidu.com/s/1AaCICasQHFiZhsIBO3KIWw?pwd=88in
 - 4FB listing also shows ITSK 驱动_26v5 官方26年09月版 on 2026-09-29, but its individual article/download URL was not yet indexed during verification.
 
-Current repository status:
-- Original full package: **download in progress**
-- Original archive SHA-256: pending completion
-- Original EXE/DAT SHA-256: pending
-- 26v4 vs 26v5 binary/token/XQS diff: pending
-
 ### 26v5 작업 순서
 
-1. 원본 ZIP/S7Z 확보
-2. 전체 패키지 SHA-256
+1. 원본 ZIP/S7Z 확보 ✅
+2. 전체 패키지 SHA-256 ✅
 3. EXE/DAT/INI/@version 안전 추출
 4. EXE/DAT SHA-256
 5. PE / AutoIt EA06 / SCRIPT offset 확인
