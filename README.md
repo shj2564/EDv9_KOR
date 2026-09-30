@@ -25,3 +25,13 @@ EDv9 / 万能驱动9 한국어 CLEAN OFFLINE 패치 프로젝트입니다.
 대용량 원본 드라이버 패키지와 제3자 저작물은 Git 히스토리에 직접 포함하지 않습니다. 저장소에는 분석 기록, 해시, 패치 로직, 재현 가능한 빌드/검증 자료를 중심으로 관리합니다.
 
 현재 작업 상태는 [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md)를 참고하세요.
+
+
+## FINAL release
+
+EDv9 26v5 / 9.0.2609.20009 Korean CLEAN OFFLINE No-Residue
+
+- FINAL EXE SHA-256: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
+- FINAL ISO SHA-256: `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261`
+- Multi-PC runtime verification: PASS
+- Blog / usage guide: https://blog.naver.com/shj2564/224426811365
