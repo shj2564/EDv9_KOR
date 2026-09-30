@@ -220,3 +220,18 @@ Runtime-verified FINAL baseline:
 - Detailed final runtime report: `docs/EDv9_26v5_FINAL_RUNTIME_20260930.md`
 
 Status: **FINAL RUNTIME VERIFIED**
+
+
+### 26v5 FINAL ISO builder
+
+- One-click builder prepared: `EDv9_26v5_FINAL_Make_ISO_OneClick.cmd`
+- Builder SHA-256: `D1823828CE8307251F5DB7DEF3C9B7A01083B3E3693FDF42A952AEBE21B477DE`
+- Repository source: `tools/26v5/make_final_iso.ps1`
+- Output: `EDv9_26v5_KO_CLEAN_FINAL.iso`
+- Filesystem: UDF 1.02
+- Volume label: `EDv9_26v5_KO`
+- Original `EDv9_x64.exe` excluded
+- FINAL EXE is the only EXE in ISO
+- ISO is automatically mounted and verified after creation
+- ISO SHA-256 + build report are generated automatically
+- Actual ISO SHA-256: pending local build on the Windows machine containing the complete Drivers set
