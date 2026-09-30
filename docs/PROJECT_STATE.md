@@ -235,3 +235,28 @@ Status: **FINAL RUNTIME VERIFIED**
 - ISO is automatically mounted and verified after creation
 - ISO SHA-256 + build report are generated automatically
 - Actual ISO SHA-256: pending local build on the Windows machine containing the complete Drivers set
+
+
+### Cross-PC runtime verification
+
+2026-09-30 user confirmed the FINAL build also works normally on another Windows PC.
+
+Result:
+- launch: PASS
+- Korean UI: PASS
+- scan: PASS
+- driver workflow: PASS
+- general runtime: PASS
+
+This confirms the FINAL build is not limited to the original test PC.
+
+Official blog / release guide:
+https://blog.naver.com/shj2564/224426811365
+
+Canonical FINAL hashes:
+- EXE: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
+- ISO: `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261`
+- No-Residue patcher: `D85D67349288B0902ED848485E5DE900FEB36A49A6AED79A1714A1D257D86D2E`
+
+Final status:
+**EDv9 26v5 Korean CLEAN OFFLINE No-Residue — MULTI-PC RUNTIME VERIFIED FINAL**
