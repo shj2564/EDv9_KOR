@@ -320,3 +320,29 @@ Status:
 ISO note:
 - Previous ISO SHA-256 `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261` contains the previous FINAL EXE `955E845C...`.
 - A new ISO must be rebuilt before assigning a new canonical ISO hash for the settings-persistence FINAL.
+
+
+### 26v5 Settings Persistence FINAL ISO — 2026-10-01
+
+Canonical FINAL ISO build completed and mounted validation passed.
+
+- ISO: `EDv9_26v5_KO_CLEAN_FINAL.iso`
+- SHA-256: `6AD8DC770FDDB2E27782131B6A2AB4F48C66BB66416C51AE8856EE549C96B536`
+- Size: 11,951,794,176 bytes
+- Payload file count: 106
+- Payload bytes: 11,950,815,374
+- Filesystem: UDF 1.02
+- Volume label: `EDv9_26v5_KO`
+- Build time: 2026-10-01 19:02:16 KST
+- Validation: PASS
+- FINAL EXE inside ISO: `12170E691631F202954E6FE6E19BC22B0C9F44571BB7FC9465FA9314254F41CA`
+
+The prior ISO hash `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261` is superseded.
+
+Final documentation image was also regenerated using the actual Settings UI screenshots and corrected Korean option labels.
+
+Canonical status:
+**EDv9 26v5 Korean CLEAN OFFLINE No-Residue + Settings Persistence — FINAL ISO VERIFIED**
+
+Release snapshot:
+`docs/EDv9_26v5_FINAL_SETTINGS_SAVE_RELEASE_20261001.md`
