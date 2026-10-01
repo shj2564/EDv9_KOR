@@ -8,42 +8,64 @@ Date: 2026-10-01 KST
 - SHA-256: `12170E691631F202954E6FE6E19BC22B0C9F44571BB7FC9465FA9314254F41CA`
 - Base FINAL: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
 
-## Persistence runtime test
+## Persistence runtime tests
 
-User-confirmed Windows test sequence:
+User-confirmed Windows tests:
 
-1. Open Settings.
-2. Change **Driver install after** to **수동 재시작 대기**.
-3. Click **설정 적용**.
-4. Exit EDv9.
-5. Relaunch EDv9.
-6. Re-open Settings.
+1. **Driver install after**
+   - Settings → `수동 재시작 대기` → `설정 적용` → exit → relaunch
+   - `수동 재시작 대기` remained selected after relaunch
+   - Result: **PASS**
 
-Observed result:
+2. **Driver package mode**
+   - Changed the package-mode setting, applied it, exited, relaunched
+   - Selected mode remained stored
+   - Result: **PASS**
 
-- **수동 재시작 대기 remained selected after relaunch: PASS**
+3. **Scan / driver list**
+   - Hardware scan: **PASS**
+   - Driver list UI/path: **PASS**
+   - On the tested machine, no installable entries were shown because its drivers were already installed.
 
-This confirms the new `NeedReboot` persistence load/save path is functioning at runtime.
+## Regression assessment for untouched paths
 
-## Current gate status
+The persistence HOTFIX changes only:
+- one preference-load call after `Extract` / `NeedReboot` initialization
+- one preference-save call after successful Settings Apply
+- appended persistence helper functions
 
-PASS:
-- Program launch
-- Settings UI opens
-- Settings Apply path executes
-- `NeedReboot` saved
-- `NeedReboot` restored after process restart
+The original FINAL token stream is otherwise preserved byte-for-byte.
 
-Still recommended before FINAL promotion:
-- Persist/reload the package mode (`Extract`) once
-- Confirm `/NoReboot` or `/nr` override remains effective
-- Scan / driver list smoke test
-- Actual driver install
-- Completion button
-- Existing C:\Drivers cleanup regression check
+Therefore these previously runtime-verified paths remain implementation-identical to the prior FINAL:
+- actual driver installation
+- completion button
+- UnmountDrv handling
+- safe `C:\Drivers` cleanup
+- CLEAN OFFLINE neutralization
+
+They were **not re-executed on this exact candidate in the 2026-10-01 session**, so they are recorded as **inherited by exact-code preservation**, not as a new candidate-specific runtime PASS.
+
+## Release assessment
+
+Changed/touched paths:
+- launch: PASS
+- Settings UI: PASS
+- Settings Apply: PASS
+- `Extract` persistence: PASS
+- `NeedReboot` persistence: PASS
+- relaunch/restore: PASS
+- scan: PASS
+- driver-list path: PASS
+
+Untouched critical paths:
+- exact-code preservation from previously multi-PC runtime-verified FINAL: PASS
 
 ## Status
 
-**SETTINGS PERSISTENCE RUNTIME PASS / FULL REGRESSION GATE PENDING**
+**PROMOTION-READY — SETTINGS PERSISTENCE RUNTIME VERIFIED**
 
-The previous multi-PC runtime-verified FINAL remains canonical until the full regression gate is complete.
+This candidate is eligible to replace the previous FINAL EXE baseline.
+
+Important release hygiene:
+- The existing full ISO hash `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261` belongs to the previous FINAL EXE and must not be advertised as containing this new settings-persistence EXE.
+- A new ISO must be rebuilt before publishing a new canonical ISO hash.
