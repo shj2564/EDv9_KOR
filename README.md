@@ -38,12 +38,15 @@ EDv9 26v5 / 9.0.2609.20009 Korean CLEAN OFFLINE No-Residue + Settings Persistenc
 - Previous critical install/completion/cleanup paths: byte-identical preservation from multi-PC runtime-verified FINAL
 - Blog / usage guide: https://blog.naver.com/shj2564/224426811365
 
-### ISO status
+### FINAL ISO
 
-The previously published ISO SHA-256:
+- File: `EDv9_26v5_KO_CLEAN_FINAL.iso`
+- SHA-256: `6AD8DC770FDDB2E27782131B6A2AB4F48C66BB66416C51AE8856EE549C96B536`
+- Size: 11,951,794,176 bytes
+- Filesystem: UDF 1.02
+- Volume label: `EDv9_26v5_KO`
+- Payload file count: 106
+- Validation: PASS
+- Build time: 2026-10-01 19:02:16 KST
 
-`F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261`
-
-belongs to the **previous FINAL EXE** (`955E845C...`) and must not be represented as containing the new settings-persistence FINAL.
-
-A new canonical ISO hash is **pending rebuild** with the new FINAL EXE.
+The previous ISO hash `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261` is obsolete and belongs to the earlier FINAL EXE.
