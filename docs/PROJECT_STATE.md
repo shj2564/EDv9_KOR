@@ -260,3 +260,29 @@ Canonical FINAL hashes:
 
 Final status:
 **EDv9 26v5 Korean CLEAN OFFLINE No-Residue — MULTI-PC RUNTIME VERIFIED FINAL**
+
+
+### 26v5 Settings Persistence HOTFIX candidate — 2026-10-01
+
+Direct analysis confirmed the original 26v5 Settings screen applies `Extract` / `NeedReboot` only to the current process and does not persist them.
+
+A new Korean CLEAN persistence HOTFIX candidate has been built from the canonical FINAL baseline.
+
+- Base FINAL SHA-256: `955E845CBB0A4B3659A35423157D15047B315A38000EA1D9EB1F05D515597713`
+- Candidate SHA-256: `12170E691631F202954E6FE6E19BC22B0C9F44571BB7FC9465FA9314254F41CA`
+- Candidate size: 22,985,240 bytes
+- Candidate token SHA-256: `8FB9D574B1D29A18DA56D344DEF63EDF51E106765579169579528D46CF164624`
+- Token lines: 24,069
+- Persistence store: `HKCU\Software\SoNG\EDv9_KOR`
+- Persisted values: `Extract`, `NeedReboot` (REG_DWORD)
+- Target Windows directory remains auto-detected and is not persisted.
+- `/Extract`, `/NoReboot`, `/nr`, and deploy no-reboot precedence preserved.
+- Original 24,042 FINAL token lines preserved byte-for-byte, with two call-site insertions plus 25 helper lines.
+- Existing CLEAN / UnmountDrv / C:\Drivers cleanup / driver-install paths preserved.
+- PE static verification: PASS.
+- 36-case preference/override truth-table simulation: PASS.
+- Detailed report: `docs/EDv9_26v5_SETTINGS_PERSISTENCE_HOTFIX_STATIC_VERIFICATION.md`
+
+Status: **STATIC VERIFIED TEST CANDIDATE / WINDOWS RUNTIME GATE PENDING**
+
+The previous MULTI-PC RUNTIME VERIFIED FINAL hash remains canonical until the persistence candidate passes Windows runtime testing.
