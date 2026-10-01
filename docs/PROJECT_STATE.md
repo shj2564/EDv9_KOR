@@ -346,3 +346,13 @@ Canonical status:
 
 Release snapshot:
 `docs/EDv9_26v5_FINAL_SETTINGS_SAVE_RELEASE_20261001.md`
+
+
+### Post-release user feedback — 2026-10-01
+
+Distributed SettingsSave FINAL received external user feedback: **"완벽"**.
+
+No new defect was reported with the current FINAL at the time of this feedback.
+
+Current canonical status remains:
+**EDv9 26v5 Korean CLEAN OFFLINE No-Residue + Settings Persistence — FINAL ISO VERIFIED**
