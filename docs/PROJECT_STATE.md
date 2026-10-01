@@ -1,6 +1,6 @@
 # PROJECT STATE
 
-Last updated: 2026-09-30 KST
+Last updated: 2026-10-01 KST
 
 ## Project target
 
@@ -291,3 +291,32 @@ Status: **SETTINGS PERSISTENCE RUNTIME PASS / FULL REGRESSION GATE PENDING**
 - Runtime evidence: `docs/EDv9_26v5_SETTINGS_PERSISTENCE_RUNTIME_20261001.md`
 
 The previous MULTI-PC RUNTIME VERIFIED FINAL hash remains canonical until the persistence candidate passes the remaining package-mode/override and normal driver-flow regression checks.
+
+
+### 26v5 Settings Persistence FINAL promotion — 2026-10-01
+
+User-confirmed Windows runtime:
+- Driver install-after preference persistence: **PASS**
+- Driver package-mode preference persistence: **PASS**
+- Hardware scan: **PASS**
+- Driver-list path: **PASS** (test machine had no pending installable drivers because they were already installed)
+
+Change-impact verification:
+- The persistence patch only adds preference load/save calls and helper functions.
+- Actual driver install, completion button, UnmountDrv, CLEAN OFFLINE neutralization, and safe C:\Drivers cleanup remain byte-identical to the prior multi-PC runtime-verified FINAL implementation.
+- Those untouched paths were not re-executed on this exact candidate during the 2026-10-01 session; their confidence is inherited from exact-code preservation + previous runtime PASS.
+
+New canonical FINAL EXE:
+- File: `EDv9_x64_KO_CLEAN.exe`
+- SHA-256: `12170E691631F202954E6FE6E19BC22B0C9F44571BB7FC9465FA9314254F41CA`
+- Size: 22,985,240 bytes
+- Token SHA-256: `8FB9D574B1D29A18DA56D344DEF63EDF51E106765579169579528D46CF164624`
+- Settings store: `HKCU\Software\SoNG\EDv9_KOR`
+- Persisted values: `Extract`, `NeedReboot`
+
+Status:
+**FINAL EXE PROMOTED — SETTINGS PERSISTENCE RUNTIME VERIFIED**
+
+ISO note:
+- Previous ISO SHA-256 `F660C0A32E98ECCDDBEABF744B9FB380807F8C42F34551773A19DCD1F33D8261` contains the previous FINAL EXE `955E845C...`.
+- A new ISO must be rebuilt before assigning a new canonical ISO hash for the settings-persistence FINAL.
