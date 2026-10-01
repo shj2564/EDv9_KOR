@@ -283,6 +283,11 @@ A new Korean CLEAN persistence HOTFIX candidate has been built from the canonica
 - 36-case preference/override truth-table simulation: PASS.
 - Detailed report: `docs/EDv9_26v5_SETTINGS_PERSISTENCE_HOTFIX_STATIC_VERIFICATION.md`
 
-Status: **STATIC VERIFIED TEST CANDIDATE / WINDOWS RUNTIME GATE PENDING**
+Status: **SETTINGS PERSISTENCE RUNTIME PASS / FULL REGRESSION GATE PENDING**
 
-The previous MULTI-PC RUNTIME VERIFIED FINAL hash remains canonical until the persistence candidate passes Windows runtime testing.
+2026-10-01 Windows runtime confirmation:
+- Settings → `수동 재시작 대기` → `설정 적용` → exit → relaunch
+- `수동 재시작 대기` remained selected after relaunch: **PASS**
+- Runtime evidence: `docs/EDv9_26v5_SETTINGS_PERSISTENCE_RUNTIME_20261001.md`
+
+The previous MULTI-PC RUNTIME VERIFIED FINAL hash remains canonical until the persistence candidate passes the remaining package-mode/override and normal driver-flow regression checks.
