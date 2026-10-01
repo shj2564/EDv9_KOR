@@ -88,3 +88,11 @@ The user-guide artwork was regenerated on 2026-10-01 using the actual Settings s
 ## Status
 
 **EDv9 26v5 Korean CLEAN OFFLINE No-Residue + Settings Persistence — FINAL ISO VERIFIED**
+
+## External user feedback
+
+2026-10-01 KST:
+- A user of the distributed SettingsSave FINAL reported the release as **"완벽"** after use.
+- No additional defect was reported with the current FINAL at the time of this feedback.
+
+This is recorded as post-release user feedback and does not replace the existing technical/runtime verification records.
