@@ -1,3 +1,18 @@
+# EasyDrv9 (EDv9) 26v5 한글판 — SoNG Korean CLEAN OFFLINE
+
+**EasyDrv9 한글화 · 만능드라이버9 한국어판 · EDv9 26v5 Korean CLEAN OFFLINE / No-Residue**
+
+> **[제작자 SoNG 공식 블로그 — EasyDrv9 26v5 한글판 소개와 사용 방법](https://blog.naver.com/shj2564/224426811365)**  
+> 처음 사용하시는 분은 블로그의 설명을 먼저 확인해 주세요.
+
+EasyDrv9(万能驱动9, EDv9) 26v5의 한국어 UI를 제공하고, 드라이버 검색·매칭·설치의 핵심 기능을 유지하면서 광고성 후처리 및 불필요한 외부 연결을 줄이는 프로젝트입니다. 기능과 최종 결과물의 상세 검증 기록은 아래에 정리했습니다.
+
+**English:** EasyDrv9 (EDv9 / 万能驱动9) v26v5 Korean localization by SoNG. Focus: Korean UI, offline driver installation workflows, removal of unwanted browser changes and clean-up residue. The [author's Korean blog post and user guide](https://blog.naver.com/shj2564/224426811365) explains the localized edition.
+
+**검색 키워드 / Keywords:** EasyDrv9 한글판, EDv9 한국어판, 만능드라이버9 한글, EasyDrv9 26v5 Korean, 万能驱动9 韩国语, 오프라인 드라이버 설치, CLEAN OFFLINE
+
+---
+
 # EDv9_KOR
 
 EDv9 / 万能驱动9 한국어 CLEAN OFFLINE 패치 프로젝트입니다.
