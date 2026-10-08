@@ -11,6 +11,8 @@ EasyDrv9(万能驱动9, EDv9) 26v5의 한국어 UI를 제공하고, 드라이버
 
 **검색 키워드 / Keywords:** EasyDrv9 한글판, EDv9 한국어판, 만능드라이버9 한글, EasyDrv9 26v5 Korean, 万能驱动9 韩国语, 오프라인 드라이버 설치, CLEAN OFFLINE
 
+**[EasyDrv9 26v5 한글판 소개·검증 가이드 / Korean & English Guide](docs/EasyDrv9_26v5_Korean_Guide.md)** — 프로젝트 설명과 해시 검증 정보.
+
 **[사용자 문의·사용 후기 및 오류 제보 / Public Q&A](https://github.com/shj2564/EDv9_KOR/issues/1)** — 한글판 관련 질문과 설치 경험을 공개적으로 공유할 수 있습니다.
 
 ---
