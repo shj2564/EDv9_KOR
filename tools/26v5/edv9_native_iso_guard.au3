@@ -31,7 +31,7 @@ Func __SONG_ISO_ReadSeal()
     $s = ""
     Local $matches = StringRegExp($tail, "^EDV9_ISO_SEAL_V1\|O=([0-9A-F]{16})\|S=([0-9A-F]{16})\|H=([0-9A-F]{64})\|END", 1)
     If Not IsArray($matches) Or UBound($matches) <> 3 Then Return SetError(4, 0, 0)
-    If $matches[2] = StringRepeat("0", 64) Then Return SetError(5, 0, 0)
+    If StringRegExp($matches[2], "^0{64}$") Then Return SetError(5, 0, 0)
     Local $out[3]
     $out[0] = Dec($matches[0])
     $out[1] = Dec($matches[1])
