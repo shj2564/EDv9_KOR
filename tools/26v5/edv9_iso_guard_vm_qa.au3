@@ -82,7 +82,16 @@ For $t = 0 To 330
     EndIf
     If $mode = "NEGATIVE" And $guardDenied Then ExitLoop
     If $mode = "POSITIVE" And $creator And $security And $mainSeen Then ExitLoop
-    If Mod($t, 20) = 0 Then QA_Log("WAIT_SEC=" & $t & " CREATOR=" & $creator & " SECURITY=" & $security & " DENIED=" & $guardDenied & " PIDALIVE=" & ProcessExists($pid))
+    If Mod($t, 20) = 0 Then
+        QA_Log("WAIT_SEC=" & $t & " CREATOR=" & $creator & " SECURITY=" & $security & " DENIED=" & $guardDenied & " PIDALIVE=" & ProcessExists($pid))
+        Local $all = WinList()
+        For $k = 1 To $all[0][0]
+            Local $winTitle = String($all[$k][0])
+            If $winTitle = "" Then ContinueLoop
+            Local $winState = WinGetState($all[$k][1])
+            If BitAND($winState, 2) Then QA_Log("VISIBLE_WINDOW=" & StringLeft($winTitle, 110) & " PID=" & WinGetProcess($all[$k][1]))
+        Next
+    EndIf
     Sleep(1000)
 Next
 Local $passed = False
