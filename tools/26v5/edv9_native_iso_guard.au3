@@ -70,12 +70,13 @@ Func __SONG_ISO_Verify()
     Local $dtype = DllCall("kernel32.dll", "uint", "GetDriveTypeW", "wstr", $drive & "\")
     If @error Or Not IsArray($dtype) Or $dtype[0] <> 5 Then Return SetError(3, 0, False)
 
-    ; The mounted ISO is accessed as raw CD-ROM media, not via a cached
-    ; manifest of its ordinary files. Metadata and added/removed files count.
+    ; Read complete raw CD-ROM media with buffered I/O. Unbuffered I/O
+    ; requires sector-aligned buffers and can fail with ERROR_INVALID_PARAMETER.
+    ; Metadata and added/removed files count, unlike per-file metadata checks.
     Local $dev = "\\.\" & $drive
     Local $fd = DllCall("kernel32.dll", "handle", "CreateFileW", "wstr", $dev, _
         "dword", 0x80000000, "dword", 3, "ptr", 0, "dword", 3, _
-        "dword", 0x08000000, "ptr", 0)
+        "dword", 0, "ptr", 0)
     If @error Or Not IsArray($fd) Or $fd[0] = Ptr(-1) Or $fd[0] = 0 Then Return SetError(4, 0, False)
     Local $handle = $fd[0]
 
