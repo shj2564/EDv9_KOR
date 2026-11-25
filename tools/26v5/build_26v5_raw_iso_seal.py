@@ -91,7 +91,7 @@ def replace_v4_popup_version(raw,L):
 
 def append_guard_section(src,scriptres):
     L=lib()
-    entries,d=L.resource_entries(src)
+    entries,d,_=L.resource_entries(src)
     last=max(d['secs'],key=lambda s:s['raw']+s['rs'])
     end=last['raw']+last['rs']
     if d['cert_off'] and d['cert_off']<end:raise RuntimeError("Overlapping certificate")
@@ -119,7 +119,7 @@ def append_guard_section(src,scriptres):
     raw+=src[end:]
     if d['cert_off']:
         diff=d['cert_off']-end
-        struct.pack_into("<II",raw,d['secdir_off'],overlay_start+diff,d['cert_sz'])
+        struct.pack_into("<II",raw,d['secdir'],overlay_start+diff,d['cert_sz'])
     ch=d['opt']+64
     struct.pack_into("<I",raw,ch,0)
     struct.pack_into("<I",raw,ch,L.pe_checksum(bytes(raw),ch))
