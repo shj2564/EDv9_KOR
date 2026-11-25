@@ -31,7 +31,12 @@ If $exe = "" Then
     Exit 11
 EndIf
 QA_Log("EXECUTABLE " & $exe)
+ ; QA isolation only: start as logged-in guest user without UAC consent screen.
+; This does not confer Administrator privileges and is not a full driver QA.
+EnvSet("__COMPAT_LAYER", "RunAsInvoker")
+QA_Log("QA_ONLY_COMPAT_LAYER=RunAsInvoker; NOT_ELEVATED")
 Local $pid = Run('"' & $exe & '"', StringLeft($exe, 3))
+EnvSet("__COMPAT_LAYER", "")
 QA_Log("PID=" & $pid & " ERROR=" & @error)
 If $pid = 0 Then
     QA_Log("FAIL CANNOT_LAUNCH")
