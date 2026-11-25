@@ -33,7 +33,10 @@ Func __SONG_ISO_ReadSeal()
     If Not IsArray($matches) Or UBound($matches) <> 3 Then Return SetError(4, 0, 0)
     If StringRegExp($matches[2], "^0{64}$") Then Return SetError(5, 0, 0)
     Local $out[3]
-    $out[0] = Dec($matches[0])
+    ; O stores the START of the seal marker. SHA normalization must target
+    ; the 64-byte H field, which begins exactly 57 bytes into that marker.
+    ; Using O directly corrupts the hash and rejects even untouched ISO images.
+    $out[0] = Dec($matches[0]) + 57
     $out[1] = Dec($matches[1])
     $out[2] = StringUpper($matches[2])
     If $out[0] <= 0 Or $out[1] < 1000000 Then Return SetError(6, 0, 0)
