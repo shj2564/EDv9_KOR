@@ -177,6 +177,10 @@ def build():
     OUT.write_bytes(updated)
     STAGE.parent.mkdir(parents=True,exist_ok=True)
     if not (STAGE.parent/"Drivers").is_dir():raise RuntimeError("ISO_STAGE Drivers not fully copied")
+    # Copied ISO contents are read-only; change the staging copy only.
+    if STAGE.exists():
+        import stat
+        STAGE.chmod(STAGE.stat().st_mode | stat.S_IWRITE)
     STAGE.write_bytes(updated)
     manifest={
        "name":"EDv9 26v5 Korean CLEAN + exact 26v4 popups + full RAW ISO seal",
